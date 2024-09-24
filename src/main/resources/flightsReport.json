@@ -1,0 +1,90 @@
+[
+  {
+    "crewMember": {
+      "name": "John Doe",
+      "role": "PILOT"
+    },
+    "monthlyData": [
+      {
+        "month": 3,
+        "hours": 16,
+        "exceeded80": false,
+        "exceeded36": false,
+        "exceeded8": true
+      },
+      {
+        "month": 7,
+        "hours": 4,
+        "exceeded80": false,
+        "exceeded36": false,
+        "exceeded8": false
+      },
+      {
+        "month": 12,
+        "hours": 44,
+        "exceeded80": false,
+        "exceeded36": true,
+        "exceeded8": true
+      }
+    ]
+  },
+  {
+    "crewMember": {
+      "name": "Jane Smith",
+      "role": "CO_PILOT"
+    },
+    "monthlyData": [
+      {
+        "month": 3,
+        "hours": 16,
+        "exceeded80": false,
+        "exceeded36": false,
+        "exceeded8": true
+      },
+      {
+        "month": 12,
+        "hours": 34,
+        "exceeded80": false,
+        "exceeded36": false,
+        "exceeded8": true
+      }
+    ]
+  },
+  {
+    "crewMember": {
+      "name": "Mike Johnson",
+      "role": "FLIGHT_ATTENDANT"
+    },
+    "monthlyData": [
+      {
+        "month": 7,
+        "hours": 4,
+        "exceeded80": false,
+        "exceeded36": false,
+        "exceeded8": false
+      },
+      {
+        "month": 12,
+        "hours": 8,
+        "exceeded80": false,
+        "exceeded36": false,
+        "exceeded8": false
+      }
+    ]
+  },
+  {
+    "crewMember": {
+      "name": "Alice Brown",
+      "role": "FLIGHT_ATTENDANT"
+    },
+    "monthlyData": [
+      {
+        "month": 12,
+        "hours": 26,
+        "exceeded80": false,
+        "exceeded36": false,
+        "exceeded8": true
+      }
+    ]
+  }
+]

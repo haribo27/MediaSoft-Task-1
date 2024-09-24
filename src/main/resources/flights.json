@@ -1,0 +1,144 @@
+{
+  "flights": [
+    {
+      "planeType": "Boeing 737",
+      "flightNumber": "BA123",
+      "departureTime": "2023-03-01T02:00",
+      "arrivalTime": "2023-03-01T18:00",
+      "departureAirport": "JFK",
+      "arrivalAirport": "LAX",
+      "crew": [
+        {
+          "memberId": "1",
+          "name": "John Doe",
+          "role": "PILOT"
+        },
+        {
+          "memberId": "2",
+          "name": "Jane Smith",
+          "role": "CO_PILOT"
+        }
+      ]
+    },
+    {
+      "planeType": "Boeing 737",
+      "flightNumber": "BA124",
+      "departureTime": "2023-07-05T01:00",
+      "arrivalTime": "2023-07-05T05:00",
+      "departureAirport": "LAX",
+      "arrivalAirport": "ORD",
+      "crew": [
+        {
+          "memberId": "1",
+          "name": "John Doe",
+          "role": "PILOT"
+        },
+        {
+          "memberId": "3",
+          "name": "Mike Johnson",
+          "role": "FLIGHT_ATTENDANT"
+        }
+      ]
+    },
+    {
+      "planeType": "Airbus A320",
+      "flightNumber": "AA456",
+      "departureTime": "2023-12-03T09:00",
+      "arrivalTime": "2023-12-03T13:00",
+      "departureAirport": "ORD",
+      "arrivalAirport": "MIA",
+      "crew": [
+        {
+          "memberId": "2",
+          "name": "Jane Smith",
+          "role": "CO_PILOT"
+        },
+        {
+          "memberId": "3",
+          "name": "Mike Johnson",
+          "role": "FLIGHT_ATTENDANT"
+        }
+      ]
+    },
+    {
+      "planeType": "Boeing 777",
+      "flightNumber": "UA789",
+      "departureTime": "2023-12-04T01:00",
+      "arrivalTime": "2023-12-04T23:00",
+      "departureAirport": "MIA",
+      "arrivalAirport": "ATL",
+      "crew": [
+        {
+          "memberId": "1",
+          "name": "John Doe",
+          "role": "PILOT"
+        },
+        {
+          "memberId": "4",
+          "name": "Alice Brown",
+          "role": "FLIGHT_ATTENDANT"
+        }
+      ]
+    },
+    {
+      "planeType": "Embraer E175",
+      "flightNumber": "SW321",
+      "departureTime": "2023-12-05T08:00",
+      "arrivalTime": "2023-12-05T12:00",
+      "departureAirport": "ATL",
+      "arrivalAirport": "JFK",
+      "crew": [
+        {
+          "memberId": "2",
+          "name": "Jane Smith",
+          "role": "CO_PILOT"
+        },
+        {
+          "memberId": "4",
+          "name": "Alice Brown",
+          "role": "FLIGHT_ATTENDANT"
+        }
+      ]
+    },
+    {
+      "planeType": "Boeing 737",
+      "flightNumber": "BA125",
+      "departureTime": "2023-12-06T01:00",
+      "arrivalTime": "2023-12-06T23:00",
+      "departureAirport": "JFK",
+      "arrivalAirport": "MIA",
+      "crew": [
+        {
+          "memberId": "1",
+          "name": "John Doe",
+          "role": "PILOT"
+        },
+        {
+          "memberId": "2",
+          "name": "Jane Smith",
+          "role": "CO_PILOT"
+        }
+      ]
+    },
+    {
+      "planeType": "Airbus A320",
+      "flightNumber": "AA457",
+      "departureTime": "2023-12-07T11:00",
+      "arrivalTime": "2023-12-07T15:00",
+      "departureAirport": "MIA",
+      "arrivalAirport": "ORD",
+      "crew": [
+        {
+          "memberId": "2",
+          "name": "Jane Smith",
+          "role": "CO_PILOT"
+        },
+        {
+          "memberId": "3",
+          "name": "Mike Johnson",
+          "role": "FLIGHT_ATTENDANT"
+        }
+      ]
+    }
+  ]
+}
