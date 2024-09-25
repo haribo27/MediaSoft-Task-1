@@ -5,7 +5,7 @@ public enum CrewRole {
     CO_PILOT,
     FLIGHT_ATTENDANT;
 
-    // Метод для сопоставления строкового значения с Enum
+
     public static CrewRole fromString(String role) {
         return switch (role.toLowerCase()) {
             case "pilot" -> PILOT;

@@ -31,21 +31,20 @@ public class Flight {
         return planeType;
     }
 
-    public Set<CrewMember> getCrewMember() {
-        return crewMember;
+    public String getDepartureAirport() {
+        return departureAirport;
     }
-
-    public void setFlightCrewMember(Set<CrewMember> crewMember) {
-        this.crewMember = crewMember;
-    }
-
 
     public String getArrivalAirport() {
         return arrivalAirport;
     }
 
-    public String getDepartureAirport() {
-        return departureAirport;
+    public void setCrewMember(Set<CrewMember> crewMember) {
+        this.crewMember = crewMember;
+    }
+
+    public Set<CrewMember> getCrewMember() {
+        return crewMember;
     }
 
     public LocalDateTime getArrivalTime() {

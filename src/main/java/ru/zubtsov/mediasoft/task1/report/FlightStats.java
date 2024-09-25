@@ -8,13 +8,13 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class FlightStats {
-    private final int year; // Добавлено поле года
+
+    private final int year;
     private Duration totalDuration = Duration.ZERO;
     private final Map<LocalDate, Duration> dailyFlightTimes = new HashMap<>();
-    private final Map<Integer, Duration> weeklyFlightTimes = new HashMap<>(); // неделя года
-    private final Map<Integer, Duration> monthlyFlightTimes = new HashMap<>(); // месяц года
+    private final Map<Integer, Duration> weeklyFlightTimes = new HashMap<>();
+    private final Map<Integer, Duration> monthlyFlightTimes = new HashMap<>();
 
-    // Конструктор с параметром года
     public FlightStats(int year) {
         this.year = year;
     }
@@ -22,14 +22,11 @@ public class FlightStats {
     public void addFlightDuration(LocalDate flightDate, Duration flightDuration) {
         totalDuration = totalDuration.plus(flightDuration);
 
-        // Учет дневного времени
         dailyFlightTimes.put(flightDate, dailyFlightTimes.getOrDefault(flightDate, Duration.ZERO).plus(flightDuration));
 
-        // Учет недельного времени
         int weekOfYear = flightDate.get(WeekFields.of(DayOfWeek.MONDAY, 1).weekOfYear());
         weeklyFlightTimes.put(weekOfYear, weeklyFlightTimes.getOrDefault(weekOfYear, Duration.ZERO).plus(flightDuration));
 
-        // Учет месячного времени
         int month = flightDate.getMonthValue();
         monthlyFlightTimes.put(month, monthlyFlightTimes.getOrDefault(month, Duration.ZERO).plus(flightDuration));
     }
@@ -46,8 +43,16 @@ public class FlightStats {
         return monthlyFlightTimes;
     }
 
+    public Duration getTotalDuration() {
+        return totalDuration;
+    }
+
+    public void setTotalDuration(Duration totalDuration) {
+        this.totalDuration = totalDuration;
+    }
+
     public int getYear() {
-        return year; // Метод для получения года
+        return year;
     }
 }
 

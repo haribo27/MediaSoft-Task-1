@@ -1,9 +1,9 @@
 package ru.zubtsov.mediasoft.task1.service;
 
-import ru.zubtsov.mediasoft.task1.report.FlightStats;
 import ru.zubtsov.mediasoft.task1.model.CrewMember;
 import ru.zubtsov.mediasoft.task1.model.CrewRole;
 import ru.zubtsov.mediasoft.task1.model.Flight;
+import ru.zubtsov.mediasoft.task1.report.FlightStats;
 import ru.zubtsov.mediasoft.task1.storage.FlightsStorage;
 import ru.zubtsov.mediasoft.task1.util.ClassManager;
 
@@ -50,23 +50,29 @@ public class FlightService {
         return flightsStorage.getFlights();
     }
 
+    public Flight getFlightByNumber(String flightNumber) {
+        return flightsStorage.getFlightByFlightNumber(flightNumber);
+    }
+
+    public CrewMember getCrewMemberById(long memberId) {
+        return flightsStorage.getCrewMember(memberId)
+                .orElseThrow(() -> new IllegalArgumentException("Crew member does not found"));
+    }
+
     public Map<CrewMember, FlightStats> calculateFlightHours(List<Flight> flights) {
         Map<CrewMember, FlightStats> flightStatsMap = new HashMap<>();
 
         for (Flight flight : flights) {
-            // Рассчитываем продолжительность полета
             Duration flightDuration = Duration.between(flight.getDepartureTime(), flight.getArrivalTime());
-            int flightYear = flight.getDepartureTime().getYear(); // Получаем год полета
+            int flightYear = flight.getDepartureTime().getYear();
 
             for (CrewMember crewMember : flight.getCrewMember()) {
-                // Получаем или создаем FlightStats для текущего члена экипажа
+
                 FlightStats stats = flightStatsMap.computeIfAbsent(crewMember, cm -> new FlightStats(flightYear));
 
-                // Добавляем продолжительность полета
                 stats.addFlightDuration(flight.getDepartureTime().toLocalDate(), flightDuration);
             }
         }
-
         return flightStatsMap;
     }
 }

@@ -1,7 +1,7 @@
 package ru.zubtsov.mediasoft.task1.util;
 
-import ru.zubtsov.mediasoft.task1.service.FlightService;
 import ru.zubtsov.mediasoft.task1.model.CrewRole;
+import ru.zubtsov.mediasoft.task1.service.FlightService;
 
 import java.time.LocalDateTime;
 import java.util.regex.Matcher;

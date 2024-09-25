@@ -34,13 +34,11 @@ public class CrewMemberReport {
             CrewMemberReport report = reports.get(i);
             jsonBuilder.append("  {\n");
 
-            // Добавляем информацию о члене экипажа
             jsonBuilder.append("    \"crewMember\": {\n");
             jsonBuilder.append("      \"name\": \"").append(report.getCrewMember().getName()).append("\",\n");
             jsonBuilder.append("      \"role\": \"").append(report.getCrewMember().getRole()).append("\"\n");
             jsonBuilder.append("    },\n");
 
-            // Добавляем данные по месяцам
             jsonBuilder.append("    \"monthlyData\": [\n");
             int monthlyDataSize = report.getMonthlyData().size();
             int j = 0;
